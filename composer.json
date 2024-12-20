@@ -1,0 +1,19 @@
+{
+  "name": "academy/theme",
+  "version": "1.0.0",
+  "description": "Theme plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Academy\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "Academy\\AcademyTheme",
+    "label": {
+      "de-DE": "Academy theme plugin",
+      "en-GB": "Academy theme plugin"
+    }
+  }
+}
