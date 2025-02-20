@@ -51,7 +51,7 @@
           "de-DE": "Neutrale Status Farbe"
         },
         "type": "color",
-        "value": "#999999",
+        "value": "#ececec",
         "editable": true,
         "tab": "colours",
         "block": "themeColours",
