@@ -1,17 +1,17 @@
 # AcademyTheme
 
-This theme plugin contains the reference implementation for the **Theme Settings** learning unit in the Shopware Academy **Frontend Development Essentials** learning path.
+This theme plugin contains the reference implementation for the **Override SCSS Variables** learning unit in the Shopware Academy **Frontend Development Essentials** learning path.
 
 ## Reference State
 
-The `LU-02-theme-configurations` tag represents the final file state of the learning unit. It demonstrates how to:
+The `LU-03-override-scss-variables` tag represents the final file state of the learning unit. It demonstrates how to:
 
-- Define a configurable color setting in `theme.json`.
-- Organize the setting with a tab, block, section, and field.
-- Make the saved setting available to SCSS as a variable.
-- Use the configured color for the Storefront main navigation.
+- Load `overrides.scss` before `@Storefront` in the `theme.json` style order.
+- Override existing Shopware and Bootstrap SCSS variables before the storefront styles are compiled.
+- Set the standard, small, and large border-radius variables to `5px`.
+- Keep custom selectors in `base.scss` instead of adding them to `overrides.scss`.
 
-This reference state builds on the theme structure from the **Creating a Theme** learning unit. Compare its `theme.json` and `base.scss` with the files in the theme that you created yourself.
+This reference state builds on the `LU-02-theme-configurations` tag. The configurable navigation color from the previous learning unit remains part of the theme. The new LU03 implementation is the completed radius override in `overrides.scss`.
 
 The theme configuration uses `label` translations in `theme.json` to remain aligned with the learning unit's supported Shopware versions. Shopware 6.7.16.0 may show a warning during `theme:refresh` that these translations were converted into Administration snippets. The warning does not mean that the refresh failed.
 
@@ -39,16 +39,11 @@ bin/console theme:change
 
 Run only one command variant. In the interactive `theme:change` command, select `AcademyTheme` and then the Storefront sales channel that should use it.
 
-## Configure and Verify the Theme
+## Compile and Verify the Override
 
-Open the Theme Manager in the Shopware Administration:
+The border-radius override does not add another setting to the Theme Manager. Its values are defined directly in `overrides.scss` and applied during theme compilation.
 
-- Go to **Sales Channels > Storefront > Theme** and select **Edit theme** for `AcademyTheme`.
-- Alternatively, go directly to **Content > Themes > AcademyTheme**.
-
-Open the **Colours** tab, select a **Background Colour** under **Main Navigation**, and save the theme configuration.
-
-Compile the theme after changing its SCSS:
+Compile the theme after installing or changing the reference state:
 
 ```bash
 shopware-cli project console theme:compile
@@ -60,7 +55,15 @@ Alternatively, run:
 bin/console theme:compile
 ```
 
-Reload the Storefront. The main navigation should use the selected background color.
+Reload the storefront without the browser cache. Verify the rounded corners across standard, small, and large components in several views, including the product listing, cart, and offcanvas cart.
+
+Compare `overrides.scss` with your own theme. It should contain:
+
+```scss
+$border-radius: 5px;
+$border-radius-sm: 5px;
+$border-radius-lg: 5px;
+```
 
 ## License
 
