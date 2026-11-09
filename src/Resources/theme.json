@@ -1,6 +1,6 @@
 {
   "name": "AcademyTheme",
-  "author": "Shopware AG",
+  "author": "Shopware Academy",
   "views": [
     "@Storefront",
     "@Plugins",
@@ -20,22 +20,6 @@
     "app/storefront/src/assets"
   ],
   "config": {
-    "blocks": {
-      "themeColours": {
-        "label": {
-          "en-GB": "Theme colours",
-          "de-DE": "Theme Farben"
-        }
-      }
-    },
-    "sections": {
-      "importantColours": {
-        "label": {
-          "en-GB": "Important colours",
-          "de-DE": "Wichtige Farben"
-        }
-      }
-    },
     "tabs": {
       "colours": {
         "label": {
@@ -44,18 +28,34 @@
         }
       }
     },
-    "fields": {
-      "academy-color-status-neutral": {
+    "blocks": {
+      "themeColours": {
         "label": {
-          "en-GB": "Neutral status colour",
-          "de-DE": "Neutrale Status Farbe"
+          "en-GB": "Theme Colours",
+          "de-DE": "Theme Farben"
+        }
+      }
+    },
+    "sections": {
+      "mainNavigation": {
+        "label": {
+          "en-GB": "Main Navigation",
+          "de-DE": "Hauptnavigation"
+        }
+      }
+    },
+    "fields": {
+      "academy-main-navigation-background-color": {
+        "label": {
+          "en-GB": "Background Colour",
+          "de-DE": "Hintergrundfarbe"
         },
         "type": "color",
         "value": "#ececec",
         "editable": true,
         "tab": "colours",
         "block": "themeColours",
-        "section": "importantColours"
+        "section": "mainNavigation"
       }
     }
   }
