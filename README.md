@@ -57,4 +57,4 @@ It is provided as an educational example and comes without a warranty and withou
 
 ## Contributing
 
-This plugin is part of the Shopware Academy curriculum.
+This plugin is part of the **Shopware Academy** curriculum.

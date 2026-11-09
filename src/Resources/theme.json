@@ -1,6 +1,6 @@
 {
   "name": "AcademyTheme",
-  "author": "Shopware AG",
+  "author": "Shopware Academy",
   "views": [
      "@Storefront",
      "@Plugins",
